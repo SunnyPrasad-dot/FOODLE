@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>FOOD GALARY</title>
+    
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  input {
+    border-radius: 3px;
+    border: none;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+
+  /* <<< Header start here >>> */
+
+  header {
+    width: 100%;
+    height: 17vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgb(63, 63, 63);
+    z-index: 2;
+    max-height: 150px;
+    
+    
+    
+  }
+  .box {
+    width: 100%;
+    max-width: 1300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.8rem;
+  }
+  
+  .top-section,
+  .bottom-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 150px;
+    height: 50px;
+  }
+  .logo:hover {
+    cursor: pointer;
+  }
+  .logo > img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .top-left-section {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+  }
+  .top-left-section > input {
+    width: 320px;
+    height: 40px;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border: 0.5px solid grey;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    border-right: none;
+  }
+  .fa-search {
+    border: 0.5px solid grey;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 4px 4px 0;
+    margin-left: -80px;
+    border-left: none;
+    padding-right: 0.4rem;
+  }
+  .fa-search:hover {
+    cursor: pointer;
+  }
+  .top-right-section {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .hr {
+    width: 100%;
+    background-color: grey;
+    height: 1px;
+  }
+  .login-btn {
+    width: 130px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(237, 186, 20);
+    color: black;
+  }
+
+  .login-btn:hover{
+    
+    transform: scale(1.1);
+    border: 2px solid black;
+    
+  }
+  
+  .lang-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100%;
+    margin-right: 0.9rem;
+  }
+  .lang-profile > select {
+    border-radius: 2px;
+    font-size: 15px;
+    border: none;
+    background: none;
+    text-decoration: underline;
+  }
+  
+  .bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-links {
+    width: 69%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links :hover{
+    color: rgb(237, 186, 20);
+    
+  }
+  
+  .link {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .link:hover {
+    border-top: 5px solid rgb(5, 5, 5);
+    color: rgb(237, 186, 20);
+    
+  }
+  
+  
+  .location {
+    display: flex;
+    width: 110px;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+  
+    color: grey;
+  }
+  .location:hover {
+    cursor: pointer;
+  }
+
+/* <<< Header start ends >>> */
+
+.heading{
+text-align: center;
+font-size: 40px;
+margin-top: 20px;
+font-family: monospace;
+}
+
+
+.box50{
+display: flex;
+padding: 70px;
+margin-top: 50px;
+}
+
+
+.img1{  
+width: 180px;
+height: 180px;
+border: 15px solid rgb(237, 186, 20); 
+border-radius: 100%;
+position: relative;
+bottom: 70px;
+left: 100px;
+cursor: pointer;
+}
+
+.box10{
+width: 220px; 
+height: 300px; 
+border-radius: 30px;
+background-color: rgb(18, 14, 14);
+margin-left: 170px;
+color: white;
+}
+
+.text-container{
+padding-left: 15px;
+line-height: 25px;
+}
+
+.buy-now{
+border-radius: 15px;
+width: 80px;
+height: 30px;
+margin-left: 60px;
+border: 0px;
+background-color: rgb(237, 186, 20);
+}
+
+.buy-now:hover{
+transform: scale(1.1);
+background-color: white;
+}
+
+.see-more{
+  width: 70px;
+  height: 25px;
+  background-color: black;
+  color: rgb(237, 186, 20);
+  border-radius: 5px;
+}
+
+.see-more:hover{
+  text-decoration: underline;
+}
+
+.backTop {
+  height: 52px;
+  background-color: rgb(237, 186, 20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  margin-top: 30px;
+}
+
+.backTop:hover {
+
+  background-color: rgb(206, 155, 4);
+}
+
+
+
+.backTop a {
+  color: black;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+.ft{
+  height:300px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding:20px ;
+  display:flex ;
+  justify-content:space-around ;
+  line-height: 35px;
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+    <header>
+        <div class="box">
+            <div class="top-section">
+                <div class="top-left-section">
+                    <div class="logo">
+                        <img src="logo.jpeg" alt="" srcset="">
+                    </div>
+                    <input type="text" placeholder="Search whatever You want to Eat" >
+                    <i class="fas fa-search"></i>
+                </div>
+            
+                <div class="top-right-section">
+                    <div class="lang-profile">
+                            <select >
+                                <option value="volvo">English</option>
+                                <option value="saab">Hindi</option>
+                                
+                            </select>
+                    </div>
+                    <a href="Form.html" target="_blank"><button class="login-btn">Login/Register</button></a>
+                </div>
+            </div>
+            <div class="hr"><hr></div>
+
+            
+            <div class="bottom-section">  
+                <ul class="nav-links">
+                   <div class="link">
+                        <li class="links">
+                            <a href="Foodle.html" target="_blank">HOME</a>
+                        </li>
+            </div>
+
+                    <div class="link">
+                        <li class="links">
+                          <a href="Thali.html" target="_blank">INDAIN THALI</a>
+                        </li>
+                        
+                    </div>
+
+                   <div class="link">
+                        <li class="links">
+                            <a href="">GALARY</a>
+                        </li>
+                   </div>
+
+                  <div class="link" >
+                        <li class="links">
+                            <a href="">TRACK</a>
+                        </li>
+                        
+                   </div>
+
+                   <div class="link">
+                        <li class="links">
+                            <a href="">ABOUT US</a>
+                        </li>
+                        
+                   </div>
+
+                  
+                </ul>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Select City</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<h2 class="heading">GALARY</h2>
+
+    <div class="box50">
+        <div class="box10">
+            <div>
+              <img src="burger.jpg" alt="Chicken Burger" class="img1">
+            </div>
+            <div class="text-container">
+              <h2>Chicken Burger</h2>
+              <div class="rating">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                <span>(160)</span>
+              </div>
+              <span>$3.50</span>
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+    
+          <div class="box10">
+            <div>
+              <img src="Khamand.jpg" alt="Khamand" class="img1">
+            </div>
+            <div class="text-container">
+              <h2>Khamand</h2>
+              <div class="rating">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                <span>(160)</span>
+              </div>
+              <span>$2.00</span>
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+    
+          <div class="box10">
+            <div>
+              <img src="Chicken-Cury.jpg" alt="Chicken-Cury" class="img1">
+            </div>
+            <div class="text-container">
+              <h2>Chicken Cury</h2>
+              <div class="rating">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                <span>(160)</span>
+              </div>
+              <span>$5.50</span>
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+    
+        </div>
+        
+        <div class="box50">
+    
+            <div class="box10">
+                <div>
+                  <img src="pakora.jpg" alt="pakora" class="img1">
+                </div>
+                <div class="text-container">
+                  <h2>Pakora</h2>
+                  <div class="rating">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    <span>(160)</span>
+                  </div>
+                  <span>$3.30</span>
+                  <button class="buy-now">Buy Now</button>
+                </div>
+              </div>
+        
+              <div class="box10">
+                <div>
+                  <img src="Samosa.jpg" alt="Samosa" class="img1">
+                </div>
+                <div class="text-container">
+                  <h2>Samosa</h2>
+                  <div class="rating">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    <span>(160)</span>
+                  </div>
+                  <span>$3.00</span>
+                  <button class="buy-now">Buy Now</button>
+                </div>
+              </div>
+        
+              <div class="box10">
+                <div>
+                  <img src="Dosa.jpg" alt="Dosa" class="img1">
+                
+                </div>
+                <div class="text-container">
+                  <h2>Paper Dosa</h2>
+                  <div class="rating">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    <span>(160)</span>
+                  </div>
+                  <span>$3.50</span>
+                  <button class="buy-now">Buy Now</button>
+                </div>
+              </div>
+        
+            </div>
+        
+    
+            <div class="box50">
+    
+                <div class="box10">
+                    <div>
+                      <img src="Panir.jpg" alt="Panir" class="img1">
+                    </div>
+                    <div class="text-container">
+                      <h2>Panir</h2>
+                      <div class="rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        <span>(160)</span>
+                      </div>
+                      <span>$3.50</span>
+                      <button class="buy-now">Buy Now</button>
+                    </div>
+                  </div>
+            
+                  <div class="box10">
+                    <div>
+                      <img src="rasgulla.jpg" alt="Rasgulla" class="img1">
+                    </div>
+                    <div class="text-container">
+                      <h2>rasgulla</h2>
+                      <div class="rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        <span>(160)</span>
+                      </div>
+                      <span>$4.00</span>
+                      <button class="buy-now">Buy Now</button>
+                    </div>
+                  </div>
+            
+                  <div class="box10">
+                    <div>
+                      <img src="Gulabjamun.jpg" alt="Gulabjamun" class="img1">
+                    </div>
+                    <div class="text-container">
+                      <h2>Gulabjamun</h2>
+                      <div class="rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        <span>(160)</span>
+                      </div>
+                      <span>$4.00</span>
+                      <button class="buy-now">Buy Now</button>
+                    </div>
+                  </div>
+            
+                </div>
+
+                <div class="box50">
+    
+                    <div class="box10">
+                        <div>
+                          <img src="pakora.jpg" alt="pakora" class="img1">
+                        </div>
+                        <div class="text-container">
+                          <h2>Pakora</h2>
+                          <div class="rating">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            <span>(160)</span>
+                          </div>
+                          <span>$3.30</span>
+                          <button class="buy-now">Buy Now</button>
+                        </div>
+                      </div>
+                
+                      <div class="box10">
+                        <div>
+                          <img src="Samosa.jpg" alt="Samosa" class="img1">
+                        </div>
+                        <div class="text-container">
+                          <h2>Samosa</h2>
+                          <div class="rating">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            <span>(160)</span>
+                          </div>
+                          <span>$3.00</span>
+                          <button class="buy-now">Buy Now</button>
+                        </div>
+                      </div>
+                
+                      <div class="box10">
+                        <div>
+                          <img src="Dosa.jpg" alt="Dosa" class="img1">
+                        
+                        </div>
+                        <div class="text-container">
+                          <h2>Paper Dosa</h2>
+                          <div class="rating">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            <span>(160)</span>
+                          </div>
+                          <span>$3.50</span>
+                          <button class="buy-now">Buy Now</button>
+                        </div>
+                      </div>
+                
+                    </div>
+
+                    <div class="box50">
+    
+                        <div class="box10">
+                            <div>
+                              <img src="Panir.jpg" alt="Panir" class="img1">
+                            </div>
+                            <div class="text-container">
+                              <h2>Panir</h2>
+                              <div class="rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                <span>(160)</span>
+                              </div>
+                              <span>$3.50</span>
+                              <button class="buy-now">Buy Now</button>
+                            </div>
+                          </div>
+                    
+                          <div class="box10">
+                            <div>
+                              <img src="rasgulla.jpg" alt="Rasgulla" class="img1">
+                            </div>
+                            <div class="text-container">
+                              <h2>rasgulla</h2>
+                              <div class="rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                <span>(160)</span>
+                              </div>
+                              <span>$4.00</span>
+                              <button class="buy-now">Buy Now</button>
+                            </div>
+                          </div>
+                    
+                          <div class="box10">
+                            <div>
+                              <img src="Gulabjamun.jpg" alt="Gulabjamun" class="img1">
+                            </div>
+                            <div class="text-container">
+                              <h2>Gulabjamun</h2>
+                              <div class="rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                <span>(160)</span>
+                              </div>
+                              <span>$4.00</span>
+                              <button class="buy-now">Buy Now</button>
+                            </div>
+                          </div>
+                    
+                        </div>
+
+                        <div class="box50">
+                            <div class="box10">
+                                <div>
+                                  <img src="burger.jpg" alt="Chicken Burger" class="img1">
+                                </div>
+                                <div class="text-container">
+                                  <h2>Chicken Burger</h2>
+                                  <div class="rating">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                    <span>(160)</span>
+                                  </div>
+                                  <span>$3.50</span>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                              </div>
+                        
+                              <div class="box10">
+                                <div>
+                                  <img src="Khamand.jpg" alt="Khamand" class="img1">
+                                </div>
+                                <div class="text-container">
+                                  <h2>Khamand</h2>
+                                  <div class="rating">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                    <span>(160)</span>
+                                  </div>
+                                  <span>$2.00</span>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                              </div>
+                        
+                              <div class="box10">
+                                <div>
+                                  <img src="Chicken-Cury.jpg" alt="Chicken-Cury" class="img1">
+                                </div>
+                                <div class="text-container">
+                                  <h2>Chicken Cury</h2>
+                                  <div class="rating">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                    <span>(160)</span>
+                                  </div>
+                                  <span>$5.50</span>
+                                  <button class="buy-now">Buy Now</button>
+                                </div>
+                              </div>
+                        
+                            </div>
+                            
+                            <div class="box50">
+                        
+                                <div class="box10">
+                                    <div>
+                                      <img src="pakora.jpg" alt="pakora" class="img1">
+                                    </div>
+                                    <div class="text-container">
+                                      <h2>Pakora</h2>
+                                      <div class="rating">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                        <span>(160)</span>
+                                      </div>
+                                      <span>$3.30</span>
+                                      <button class="buy-now">Buy Now</button>
+                                    </div>
+                                  </div>
+                            
+                                  <div class="box10">
+                                    <div>
+                                      <img src="Samosa.jpg" alt="Samosa" class="img1">
+                                    </div>
+                                    <div class="text-container">
+                                      <h2>Samosa</h2>
+                                      <div class="rating">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                        <span>(160)</span>
+                                      </div>
+                                      <span>$3.00</span>
+                                      <button class="buy-now">Buy Now</button>
+                                    </div>
+                                  </div>
+                            
+                                  <div class="box10">
+                                    <div>
+                                      <img src="Dosa.jpg" alt="Dosa" class="img1">
+                                    
+                                    </div>
+                                    <div class="text-container">
+                                      <h2>Paper Dosa</h2>
+                                      <div class="rating">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                        <span>(160)</span>
+                                      </div>
+                                      <span>$3.50</span>
+                                      <button class="buy-now">Buy Now</button>
+                                    </div>
+                                  </div>
+                              </div>
+
+                              
+
+                            <center><button class="see-more">See More</button></center>
+                
+                            <div class="backTop">
+                              <a href="#top">Back to top</a>
+                              
+                            </div>
+                            
+                            
+                              <div class="ft">
+                            
+                                <div class="fr">
+                                  <ul>
+                                    <li class="li"><h3>Company</h3></li>
+                                    <li>About Us</li>
+                                    <li>Contact Us</li>
+                                    <li>Press Coverage</li>
+                                    <li>Careers</li>
+                                    <li>Business Partnership</li>
+                                    <li>Become a Health Partner</li>
+                                    
+                                  </ul>
+                                </div>
+                              
+                                <div class="fr">
+                                  <ul>
+                                    <li class="li"><h3>Contact Us</h3></li>
+                                    <li>Help & Support</li>
+                                    <li>Partner with us</li>
+                                    <li>Ride with us</li>
+                                    <li>Return Policy</li>
+                                    <li></li>
+                                    <li></li>
+                                   
+                                  
+                                  </ul>
+                                </div>
+                              
+                                <div class="fr">
+                                  <ul>
+                                    <li class="li"><h3>Available in</h3></li> 
+                                    <li></li>
+                                    <li>Mumbai</li>
+                                    <li>Pune</li>
+                                    <li>Gujarat</li>
+                                    <li>Maharastra</li>
+                                    <li>Delhi</li>
+                                  
+                                  </ul>
+                                </div>
+                              </footer>
+                            
+
+
+</body>
+</html>
